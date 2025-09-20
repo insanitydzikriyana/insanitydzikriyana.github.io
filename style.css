@@ -1,11 +1,142 @@
+/* NAVBAR */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(to top, rgb(2, 0, 10), rgb(19, 3, 75));
+ 
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  backdrop-filter: blur(25px);
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo h1 {
+  font-size: 30px;
+  color: white;
+  
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation li {
+  list-style-type: none;
+}
+
+.navigation li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 99px;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.navigation li a:hover {
+  background: #007dfc;
+  box-shadow: 0 0 10px #007dfc80;
+  transform: scale(1.05);
+}
+
+input {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 952px) {
+  .navigation {
+    position: absolute;
+    top: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    right: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  input:checked ~ .navigation {
+    max-height: 100vh;
+    padding: 50px 0;
+  }
+
+  .menu {
+    display: block;
+    width: 60px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu label {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+  }
+
+  .x-icon {
+    display: none;
+  }
+
+  input:checked ~ .menu .line-icon {
+    display: none;
+  }
+
+  input:checked ~ .menu .x-icon {
+    display: block;
+  }
+}
+
+/* AKHIR NAVBAR */
+
+
+.container{
+  color: wheat;
+}
+
+p {
+  color: wheat;
+}
 
 .jumbotron {
-  padding-top: 6rem;
-  background-color: #e2edff;
+  padding-top: 8rem;
+  background-color: inherit;
+  color: wheat;
 }
 
 #projects {
-    background-color: #e2edff;
+    background-color: inherit;
 }
 
 section{
@@ -19,3 +150,30 @@ section{
 #galery .row > * {
   padding: 0%;
 }
+
+
+/* SOSMED ICONS */
+
+.list a:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+a {
+  /* untuk menghilangkan garis bawah atau decorati tesk nya */
+  text-decoration: none;
+  /* Pake inherit juga bisa jadi warna dari sebelumnya akan di wariskan */
+  color: #ffffff;
+
+  
+}
+.sosmed {
+  /* Untuk mengubah ukuran  */
+  font-size: 1.5rem;
+}
+
+.sosmed a:not(:last-child) {
+  /* untuk mengukur antar jarak kanan */
+  margin-right: 1rem;
+  
+}
+/* AKHIR SOSMED ICONS */
