@@ -18,7 +18,13 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
     <!-- LOGO BROWSER -->
-     <link rel="icon"  type="image/png" href="img/thumbnail/logo (2).png">
+    <link rel="icon" type="image/png" href="img/thumbnail/logo (2).png" />
+    <!-- Logo Icons  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+    <!-- Font Awesome (untuk ikon sosmed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <title>Portfolio | Insanity dzikriyana</title>
   </head>
   <body>
@@ -64,36 +70,31 @@
         <div class="col-md-6 text-center">
           <img src="img/thumbnail/insanity (2).png" alt="Insanity Dzikriyana" width="200" class="rounded-circle img-thumbnail" />
         </div>
-        <div class="col-md-6 text-center text-md-start">
-          <h1 class="display-4"></h1>
-          <p class="lead"></p>
-          <!-- SOSIAL MEDIA -->
-          <!-- Div ini akan membuat element jadi satu grup Yang tadinya Pisah2 -->
-          <div class="sosmed mt-3" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="400">
-            <a href="https://www.tiktok.com/@insanitydzikriyana" target="_blank">
-              <i class="ph ph-tiktok-logo fs-3 me-1"></i>
-              <span>Tiktok</span>
-            </a>
+        <div class="col-md-6 text-center text-md-start TTT">
+          <h1>Heyy I'm<span class="typeng-text"></span> </h1>
+          <h1>I'm a<span class="typing-text"></span> </h1>
+          <!-- Sosmed Kotak Hologram -->
 
-            <a href="https://github.com/insanitydzikriyana" target="_blank">
-              <i class="ph ph-github-logo fs-3 me-1"></i>
-              <span>Github</span>
-            </a>
-
-            <a href="https://insanitydzikriyana-about-me.up.railway.app/" target="_blank">
-              <i class="ph ph-browser fs-3 me-1"></i>
-              <span>Website</span>
-            </a>
-            <a href="https://www.instagram.com/insanity_dzikriyana" target="_blank">
-              <i class="ph ph-instagram-logo fs-3 me-1"></i>
-              <span>instagram</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/insanity-dzikriyana-07319a378/" target="_blank">
-              <i class="ph ph-linkedin-logo fs-3 me-1"></i>
-              <span>Linked</span>
-            </a>
+          <div class="socials-box">
+            <a href="https://facebook.com" target="_blank"
+              ><span><i class="fab fa-google"></i> Website</span></a
+            >
+            <a href="https://instagram.com" target="_blank"
+              ><span><i class="fab fa-instagram"></i> Instagram</span></a
+            >
+            <a href="https://github.com" target="_blank"
+              ><span><i class="fab fa-github"></i> Github</span></a
+            >
+            <a href="https://github.com" target="_blank"
+              ><span><i class="fab fa-tiktok"></i> Tiktok</span></a
+            >
+            <a href="https://github.com" target="_blank"
+              ><span><i class="fab fa-linkedin"></i> Linkedin</span></a
+            >
           </div>
+
+          <!-- Tombol Download -->
+          <a href="cv.pdf" onclick="downloadCV(event)" class="btn-download"> <i class="bi bi-download"></i> Download CV </a>
         </div>
       </div>
     </section>
@@ -142,7 +143,7 @@
               </div>
             </div>
           </div>
-          <!-- <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="1000">
+          <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="1000">
             <div class="card">
               <img src="img/thumbnail/Projek.png" class="card-img-top" alt="project 1" />
               <div class="card-body">
@@ -173,75 +174,47 @@
                 <p class="card-text">Ini Adalah Sebuah Project Dengan Tema Resep-Masakan</p>
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
     <!-- Akhir Projects -->
 
-    <!-- Galery -->
     <section id="galery">
       <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Galery</h2>
+        <div class="row text-center">
+          <div class="col mb-3">
+            <h2>Gallery</h2>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-3">
+          <!-- Gambar 1 -->
+          <div class="col-md-3 col-6 mb-3">
+            <a href="#">
+              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar1" class="img-fluid galery-img" />
+            </a>
+          </div>
+          <!-- Gambar 2 -->
+          <div class="col-md-3 col-6 mb-3">
+            <a href="#">
+              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar2" class="img-fluid galery-img" />
+            </a>
+          </div>
+          <!-- Gambar 3 -->
+          <div class="col-md-3 col-6 mb-3">
+            <a href="#">
+              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar3" class="img-fluid galery-img" />
+            </a>
+          </div>
+          <!-- Gambar 4 -->
+          <div class="col-md-3 col-6 mb-3">
             <a href="#">
               <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <!-- <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="#">
-              <img src="img/thumbnail/galery/4.jpeg" alt="Gambar4" class="img-fluid galery-img" />
-            </a>
-          </div> -->
         </div>
       </div>
     </section>
-    <!-- Ahkhir Galery -->
 
     <!-- Contact -->
     <section id="contact">
@@ -312,42 +285,8 @@
       gsap.registerPlugin(TextPlugin);
 
       // Buat Efek di GSAP
-      gsap.to(".lead", { duration: 1, delay: 0.4, text: "Student | Web Devolopment | Design" });
-      gsap.to(".display-4", { duration: 1, delay: 0.2, text: " Insanity Dzikriyana" });
       gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
-      gsap.from(".navbar", { duration: 1, y: "-100", opacity: 0, ease: "bounce" });
       gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
-    </script>
-
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbwNdiPB2GiwZp5CTKcYx-sbKGp6CxSjLtBrC-oiJ3Qpopma52dXxEN3qE5Pjn-AZNFD/exec";
-      const form = document.forms["wpu-contact-form"];
-
-      //
-      const btnKirim = document.querySelector(".btn-kirim");
-      const btnLoading = document.querySelector(".btn-loading");
-      const myAlert = document.querySelector(".my-alert");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        //ketika tombol submit di klick
-        //tampilkan tombol loading hilangkan tombol kirim
-        btnLoading.classList.toggle("d-none");
-        btnKirim.classList.toggle("d-none");
-
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            //tampilkan tombol kirim hilangkan tombol loading
-            btnLoading.classList.toggle("d-none");
-            btnKirim.classList.toggle("d-none");
-            //tampilkan alert
-            myAlert.classList.toggle("d-none");
-            //reset form nya
-            form.reset();
-            console.log("Success!", response);
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
     </script>
 
     <script src="js/script.js"></script>

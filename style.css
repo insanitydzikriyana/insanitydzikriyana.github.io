@@ -1,16 +1,13 @@
+body {
+   background: linear-gradient(to top , #080050, #000000);
+}
 /* NAVBAR */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
-body {
-  background: linear-gradient(to top, rgb(2, 0, 10), rgb(19, 3, 75));
- 
-}
-
 nav {
   background: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -31,9 +28,8 @@ nav {
 }
 
 .logo h1 {
-  font-size: 30px;
+  font-size: clamp(20px, 3vw, 30px); /* responsif */
   color: white;
-  
 }
 
 .navigation {
@@ -47,11 +43,11 @@ nav {
 
 .navigation li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px); /* responsif */
   font-weight: 600;
   padding: 10px 20px;
   border-radius: 99px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease-in-out;
   color: white;
 }
 
@@ -59,6 +55,7 @@ nav {
   background: #007dfc;
   box-shadow: 0 0 10px #007dfc80;
   transform: scale(1.05);
+  color: #ffff;
 }
 
 input {
@@ -69,7 +66,16 @@ input {
   display: none;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE - NAVBAR */
+@media screen and (max-width: 1024px) {
+  .navigation {
+    gap: 0.8rem;
+  }
+  .logo h1 {
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 952px) {
   .navigation {
     position: absolute;
@@ -118,15 +124,36 @@ input {
   }
 }
 
+/* Tablet Portrait */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 0 5%;
+  }
+  .navigation li a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .logo h1 {
+    font-size: 20px;
+  }
+  .navigation li a {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}
+
 /* AKHIR NAVBAR */
 
-
-.container{
+.container {
   color: wheat;
 }
 
 p {
-  color: wheat;
+  color: rgb(255, 255, 255);
 }
 
 .jumbotron {
@@ -136,11 +163,11 @@ p {
 }
 
 #projects {
-    background-color: inherit;
+  background-color: inherit;
 }
 
-section{
-    padding-top: 6rem;
+section {
+  padding-top: 6rem;
 }
 
 .galery-img {
@@ -151,29 +178,192 @@ section{
   padding: 0%;
 }
 
-
-/* SOSMED ICONS */
-
-.list a:not(:last-child) {
-    margin-bottom: 1rem;
+/* Tablet */
+@media screen and (max-width: 992px) {
+  #galery .row {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom tablet */
+  }
 }
 
-a {
-  /* untuk menghilangkan garis bawah atau decorati tesk nya */
+/* Mobile */
+@media screen and (max-width: 576px) {
+  #galery .row {
+    grid-template-columns: repeat(1, 1fr); /* 1 kolom mobile */
+  }
+}
+
+/* Biar scroll ke section tidak ketutup navbar */
+html {
+  scroll-padding-top: 80px;
+}
+
+.btn-download {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(10px, 2vw, 14px); /* font responsif */
+  padding: clamp(4px, 1.5vw, 10px) clamp(10px, 3vw, 22px); /* padding responsif */
+  border-radius: 10px; /* kotak lurus */
+  transition: all 0.3s ease;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
-  /* Pake inherit juga bisa jadi warna dari sebelumnya akan di wariskan */
-  color: #ffffff;
-
-  
-}
-.sosmed {
-  /* Untuk mengubah ukuran  */
-  font-size: 1.5rem;
 }
 
-.sosmed a:not(:last-child) {
-  /* untuk mengukur antar jarak kanan */
-  margin-right: 1rem;
-  
+.btn-download:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: rgb(0, 110, 255);
+  color: white;
 }
-/* AKHIR SOSMED ICONS */
+
+/* === SOSMED HOLOGRAM KOTAK === */
+.socials-box {
+  display: flex;
+  gap: 7px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.socials-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #00ffe5;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.socials-box a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(90deg, #05aff3, #3b05a1, #060447, #13efff);
+  background-size: 300% 300%;
+  animation: borderMove 5s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.socials-box a span {
+  position: relative;
+  z-index: 1;
+}
+
+.socials-box a:hover {
+  color: #ff00f7;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #ff00f7, 0 0 20px #00ffe5;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive Sosmed */
+@media screen and (max-width: 576px) {
+  .socials-box {
+    justify-content: center;
+  }
+
+  .socials-box a {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+.typeng-text {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: #04e2ff;
+  border-right: 2px solid #1900ff; /* kursor kedip */
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blinkCursor 0.7s steps(1) infinite;
+
+
+ /* Efek warna hologram */
+  background: linear-gradient(90deg, #00eeff, #59bdff, #00fff2, #00b7ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hologram 6s infinite linear, blinkCursor 0.7s steps(1) infinite;
+
+  border-right: 2px solid #00ffe5; /* kursor ketik */
+}
+
+/* Animasi kursor kedip */
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+/* Animasi gradasi hologram */
+@keyframes hologram {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.typing-text {
+  font-size: 22px;
+  font-weight: bold;
+  font-style: italic;
+  color: #04e2ff;
+  border-right: 2px solid #1900ff; /* kursor kedip */
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blinkCursor 0.7s steps(1) infinite;
+
+
+ /* Efek warna hologram */
+  background: linear-gradient(90deg, #00eeff, #59bdff, #00fff2, #00b7ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hologram 6s infinite linear, blinkCursor 0.7s steps(1) infinite;
+
+  border-right: 2px solid #00ffe5; /* kursor ketik */
+}
+
+/* Animasi kursor kedip */
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+/* Animasi gradasi hologram */
+@keyframes hologram {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.TTT h1{
+  font-size: 30px;
+}
